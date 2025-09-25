@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Papeleria Dani</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        height: 100vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background-image: url(../fotos/fondobody.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      nav {
+        background-color: #ffffffff;
+        box-shadow: 1px 5px 2px;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav li {
+        height: 50px;
+      }
+      nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        color: rgb(0, 0, 0);
+        border-radius: 0.1em;
+        
+      }
+      nav a:hover {
+        background-color: rgba(0, 0, 0, 0.833);
+        color: #ffffff;
+        
+      }
+      nav li:first-child {
+        margin-right: auto;
+      }
+      .menuchico {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: #ffffff5d;
+        box-shadow: -10px 0 10px #000;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(10px);
+      }
+      .menuchico li {
+        width: 100%;
+      }
+      .menuchico a {
+        width: 100%;
+        color: #000000;
+      }
+      .menu-boton{
+        display: none;
+      }
+      @media(max-width: 800px){
+        .hideOnmobile{
+            display: none;
+        }
+        .menu-boton{
+            display: block;
+        }
+      }
+      @media(max-width: 400px){
+        .menuchico{
+            width: 100%;
+        }
+        
+        .main{
+          margin-left: 8%;
+          display: flex;
+          flex-direction: column;
+        }
+        section .page{
+          padding: 15px;
+          font-size: 2vw;
+          width: 300px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+      @media(max-width: 430px){
+        body{
+          align-items: center;
+          justify-content: center;
+        }
+        .menuchico{
+            width: 100%;
+        }
+        .main{
+          margin-left: 11%;
+          display: flex;
+          flex-direction: column;
+        }
+        section .page{
+          padding: 15px;
+          font-size: 2vw;
+          width: 300px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+      }
+      @media(max-width: 375px){
+        body{
+          align-items: center;
+          justify-content: center;
+        }
+        .menuchico{
+            width: 100%;
+        }
+        .main{
+          margin-left: 5%;
+          display: flex;
+          flex-direction: column;
+        }
+        hgroup{
+          align-items: center;
+        }
+        hgroup h1{
+          font-size: 9vw;
+          margin-left: 50px;
+        }
+        hgroup h2{
+          font-size: 5vw;
+          margin-left: 90px;
+        }
+        section .page{
+          padding: 15px;
+          font-size: 2vw;
+          width: 300px;
+          margin-bottom: 10px;
+          text-align: center;
+        }
+        section .main{
+          margin-top: 50px;
+        }
+      }
+      
+
+      h1{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-top: 130px;
+        margin-left: 34%;
+        color: #fff;
+        font-size: 4vw;
+
+      }
+      h2{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-top: 20px;
+        margin-left: 39%;
+        color: #fff;
+        font-size: 2vw;
+      }
+      section{
+        margin-top: 8vw;
+        margin-left: 26%;
+      }
+      section a{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1.5vw;
+        color: #fff;
+        text-decoration: none;
+        padding: 25px;
+        background-color: black;
+        border-radius: 0.5em;
+        margin-left: 9px;
+      }
+      section a:hover{
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <ul class="menuchico">
+        <li onclick="ocultaMenu()"">
+          <a href="#"
+            ><span class="material-symbols-outlined"> arrow_back </span></a
+          >
+        </li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="ventas2.html">Ventas</a></li>
+        <li><a href="">Cerrar sesion</a></li>
+      </ul>
+      <ul>
+        <li><img src="../fotos/logoMiselanea.png" alt="" width="48px" style="margin-left: 20px;"></li>
+        
+        <li class="hideOnmobile"><a href="../version2/productos.html">Productos</a></li>
+        <li class="hideOnmobile"><a href="../version2/ventas2.html">Ventas</a></li>
+        <li class="hideOnmobile"><a href="./login.html">Cerrar sesion</a></li>
+        <li  class="menu-boton" onclick="muestraMenu()">
+          <a href="#"><span class="material-symbols-outlined"> menu </span></a>
+        </li>
+      </ul>
+    </nav>
+    <hgroup>
+      <h1>Bienvenido Pepito</h1>
+      <h2>Que deseas hacer hoy?</h2>
+    </hgroup>   
+
+    <section class="main">
+        
+      <a class="page" href="./ventas2.html">Nueva Venta</a>
+      <a class="page" href="./productos.html">Registrar Nuevo Producto</a>
+      <a class="page" href="./historial_ventas.html">Historial De Ventas</a>
+      
+    </section>
+    <script>
+      function muestraMenu(){
+          const sidebar = document.querySelector('.menuchico')
+          sidebar.style.display = 'flex'
+      }
+      function ocultaMenu(){
+        const sidebar = document.querySelector('.menuchico')
+          sidebar.style.display = 'none'
+      }
+    </script>
+  </body>
+</html>
