@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function muestraMenu() {
+        document.querySelector(".menuchico").style.display = "flex";
+      }
+      function ocultaMenu() {
+        document.querySelector(".menuchico").style.display = "none";
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        height: 130vh;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background: linear-gradient(180deg, #dcdcdc 0%, #cfcfcf 100%);
+      }
+      nav {
+        background-color: #ffffffff;
+        box-shadow: 1px 5px 2px;
+      }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      nav li {
+        height: 50px;
+      }
+      nav a {
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        align-items: center;
+        display: flex;
+        color: rgb(0, 0, 0);
+        border-radius: 0.1em;
+      }
+      nav a:hover {
+        background-color: rgba(0, 0, 0, 0.833);
+        color: #ffffff;
+      }
+      nav li:first-child {
+        margin-right: auto;
+      }
+      .menuchico {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: #ffffff5d;
+        box-shadow: -10px 0 10px #000;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(10px);
+      }
+      .menuchico li {
+        width: 100%;
+      }
+      .menuchico a {
+        width: 100%;
+        color: #000000;
+      }
+      .menu-boton {
+        display: none;
+      }
+      @media (max-width: 800px) {
+        .hideOnmobile {
+          display: none;
+        }
+        .menu-boton {
+          display: block;
+        }
+      }
+      @media (max-width: 400px) {
+        .menuchico {
+          width: 100%;
+        }
+      }
+
+      /* NUEVO: formulario para agregar producto */
+      .form-producto {
+        max-width: 800px;
+        margin: 2rem auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .form-producto h2 {
+        margin-bottom: 1.5rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .form-grupo {
+        margin-bottom: 1.2rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .form-label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .form-input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .form-boton {
+        background: #28a745;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .form-boton:hover {
+        background: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="container">
+      <ul class="menuchico">
+        <li onclick="ocultaMenu()">
+          <a href="#">
+            <span class="material-symbols-outlined"> arrow_back </span>
+          </a>
+        </li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="ventas2.html">Ventas</a></li>
+        <li><a href="">Cerrar sesion</a></li>
+      </ul>
+      <ul>
+        <li>
+          <img
+            src="logoMiselanea.png"
+            alt=""
+            width="48px"
+            style="margin-left: 20px"
+          />
+        </li>
+        <li class="hideOnmobile"><a href="index.html">Inicio</a></li>
+        <li class="hideOnmobile"><a href="productos.html">Productos</a></li>
+        <li class="hideOnmobile"><a href="ventas2.html">Ventas</a></li>
+        <li class="hideOnmobile"><a href="login.html">Cerrar sesion</a></li>
+        <li class="menu-boton" onclick="muestraMenu()">
+          <a href="#"><span class="material-symbols-outlined"> menu </span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Formulario para agregar producto -->
+    <div class="form-producto">
+      <h2>Editar producto</h2>
+      <form action="actualizar_producto.php" method="POST">
+        <!-- Campo oculto con el ID del producto -->
+        <input type="hidden" name="id" value="123" />
+
+        <div class="form-grupo">
+          <label class="form-label" for="nombre">Nombre del producto</label>
+          <input
+            class="form-input"
+            type="text"
+            id="nombre"
+            name="nombre"
+            value="Lápiz HB N°2"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="codigo">Código de barras o SKU</label>
+          <input
+            class="form-input"
+            type="text"
+            id="codigo"
+            name="codigo"
+            value="7501234567890"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="categoria">Categoría</label>
+          <select class="form-input" id="categoria" name="categoria">
+            <option value="utiles" selected>Útiles escolares</option>
+            <option value="papel">Papel</option>
+            <option value="impresion">Servicios de impresión</option>
+            <option value="regalos">Regalos</option>
+          </select>
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="precio">Precio de venta</label>
+          <input
+            class="form-input"
+            type="number"
+            id="precio"
+            name="precio"
+            step="0.01"
+            value="5.00"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="costo">Costo</label>
+          <input
+            class="form-input"
+            type="number"
+            id="costo"
+            name="costo"
+            step="0.01"
+            value="3.00"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="stock">Stock</label>
+          <input
+            class="form-input"
+            type="number"
+            id="stock"
+            name="stock"
+            value="150"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="descripcion">Descripción</label>
+          <textarea
+            class="form-input"
+            id="descripcion"
+            name="descripcion"
+            rows="4"
+          >
+Lápiz escolar de madera con goma, ideal para estudiantes.</textarea
+          >
+        </div>
+
+        <button type="submit" class="form-boton">Actualizar producto</button>
+        <a
+          href="productos.html"
+          class="form-boton"
+          style="background: #6c757d; margin-left: 1rem"
+          >Cancelar</a
+        >
+      </form>
+    </div>
+  </body>
+</html>
