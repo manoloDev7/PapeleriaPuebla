@@ -120,11 +120,15 @@
       }
       .form-producto h2 {
         margin-bottom: 1.5rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
       }
       .form-grupo {
         margin-bottom: 1.2rem;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
       }
       .form-label {
         font-weight: bold;
@@ -254,6 +258,23 @@
             id="stock"
             name="stock"
             value="150"
+          />
+        </div>
+
+        <div class="form-grupo">
+          <label class="form-label" for="foto">Foto del producto</label>
+          <input
+            class="form-input"
+            type="file"
+            id="foto"
+            name="foto"
+            accept="image/*"
+          />
+          <!-- Preview opcional -->
+          <img
+            src="uploads/boligrafo.jpg"
+            alt="Vista previa del producto"
+            style="max-width: 150px; margin-top: 10px; border: 1px solid #ccc"
           />
         </div>
 
